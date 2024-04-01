@@ -30,8 +30,8 @@ export default function Header() {
       <Navbar.Collapse>
         <Navbar.Link href="/">Home</Navbar.Link>
         <Navbar.Link href="/products">Products</Navbar.Link>
-        <Navbar.Link href="/products">Collection</Navbar.Link>
-        <Navbar.Link href="/products">About Us</Navbar.Link>
+        <Navbar.Link href="/gallery">Gallery</Navbar.Link>
+        <Navbar.Link href="/about">About Us</Navbar.Link>
       </Navbar.Collapse>
 
       <form>
