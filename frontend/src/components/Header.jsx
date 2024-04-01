@@ -5,25 +5,33 @@ import { FaMoon } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 export default function Header() {
-    const path = useLocation().pathname;
   return (
     
-    <Navbar className='border-b-2'>
-      
-      <Navbar.Toggle />
+    <Navbar className='shadow-lg'>
+      <Navbar.Toggle className='ml-3' />
 
-      <Navbar.Brand href="#">
-        <img src={logo} className="mr-3 h-6 sm:h-9" alt="SLIIT Logo" />
+      <Navbar.Brand>
+        <img src={logo} className="mr-3 h-9 sm:h-9" alt="Company Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">ARCANA CANDLES</span>
       </Navbar.Brand>
       
+      <div className="flex md:order-2">
+        <Button className='w-12 h-10 lg:hidden mr-3' color='gray' pill>
+          <AiOutlineSearch />
+        </Button>
+        <Button className='w-12 h-10 hidden sm:inline mr-3' color='gray' pill>
+          <FaMoon />
+        </Button>
+        <Link to='/sign-in'>
+          <Button gradientDuoTone='pinkToOrange'>Sign In</Button>
+        </Link> 
+      </div>
+
       <Navbar.Collapse>
-        <Navbar.Link active={path === "/"} as={'div'}>
-          <Link to='/'>Home</Link>
-        </Navbar.Link>
-        <Navbar.Link active={path === "/projects"} as={'div'}>
-          <Link to='/products'>Products</Link>
-        </Navbar.Link>
+        <Navbar.Link href="/">Home</Navbar.Link>
+        <Navbar.Link href="/products">Products</Navbar.Link>
+        <Navbar.Link href="/products">Collection</Navbar.Link>
+        <Navbar.Link href="/products">About Us</Navbar.Link>
       </Navbar.Collapse>
 
       <form>
@@ -35,20 +43,6 @@ export default function Header() {
         />
       </form>
 
-      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
-        <AiOutlineSearch />
-      </Button>
-
-      <div className='flex gap-2 md:order-2 '>
-        <Button className='w-12 h-10 hidden sm:inline' color='gray' pill>
-          <FaMoon />
-        </Button>
-        <Link to='/sign-in'>
-          <Button gradientDuoTone='purpleToBlue'>Sign In</Button>
-        </Link>
-        
-      </div>
-      
     </Navbar>
   );
 }
