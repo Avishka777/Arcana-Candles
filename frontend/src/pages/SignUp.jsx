@@ -48,14 +48,14 @@ export default function SignUp() {
   };
 
   return (
-    <div className='min-h-screen mt-10'>
+    <div className='my-10'>
       <div className='flex p-3 max-w-7xl mx-auto flex-col md:flex-row md:items-center gap-5'>
         
         {/* left */}
         <div className='flex-1 flex flex-col items-center justify-center mx-8'>
           <img src={logo} className="h-28 sm:h-36" alt="Company Logo" />
-          <p className='text-lg mt-5 text-center'>
-            Elevate Your Space, Enhance Your Mood, and Embrace Pure Bliss...
+          <p className='text-lg mt-5 text-center font-serif'>
+            - Illuminate the Path to Inner Harmony with Arcana -
           </p>
           <img src={cover} className="mr-3 h-0 sm:h-80 rounded-lg shadow-2xl p-2 mt-5 min-w-max" alt="Cover Picture" />
         </div>
@@ -106,7 +106,7 @@ export default function SignUp() {
               )}
             </Button>
           </form>
-          <div className='flex gap-2 text-sm mt-5'>
+          <div className='flex gap-2 text-sm mt-5 font-serif'>
             <span>Have an account?</span>
             <Link to='/sign-in' className='text-blue-500'>
               Sign In

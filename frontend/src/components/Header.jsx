@@ -12,14 +12,14 @@ export default function Header() {
 
       <Navbar.Brand>
         <img src={logo} className="mr-3 h-9 sm:h-9" alt="Company Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">ARCANA CANDLES</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white font-serif">ARCANA CANDLES</span>
       </Navbar.Brand>
       
       <div className="flex md:order-2">
         <Button className='w-12 h-10 lg:hidden mr-3' color='gray' pill>
           <AiOutlineSearch />
         </Button>
-        <Button className='w-12 h-10 hidden sm:inline mr-3' color='gray' pill>
+        <Button className='w-12 h-10 sm:inline mr-3' color='gray' pill>
           <FaMoon />
         </Button>
         <Link to='/sign-in'>
