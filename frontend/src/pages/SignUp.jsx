@@ -51,7 +51,7 @@ export default function SignUp() {
     <div className='my-10'>
       <div className='flex p-3 max-w-7xl mx-auto flex-col md:flex-row md:items-center gap-5'>
         
-        {/* left */}
+        {/* Left */}
         <div className='flex-1 flex flex-col items-center justify-center mx-8'>
           <img src={logo} className="h-28 sm:h-36" alt="Company Logo" />
           <p className='text-lg mt-5 text-center font-serif'>
@@ -60,8 +60,12 @@ export default function SignUp() {
           <img src={cover} className="mr-3 h-0 sm:h-80 rounded-lg shadow-2xl p-2 mt-5 min-w-max" alt="Cover Picture" />
         </div>
         
-        {/* right */}
+        {/* Right */}
         <div className='flex-1 mx-8'>
+        <div className='text-3xl mb-3 text-center font-serif text-teal-500'>
+          Create Your Account
+        </div>
+        <hr className='shadow-lg mb-2 '/>
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
               <Label value='First Name :' />
@@ -107,7 +111,7 @@ export default function SignUp() {
             </Button>
           </form>
           <div className='flex gap-2 text-sm mt-5 font-serif'>
-            <span>Have an account?</span>
+            <span>Have An Account?</span>
             <Link to='/sign-in' className='text-blue-500'>
               Sign In
             </Link>
