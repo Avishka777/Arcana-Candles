@@ -22,19 +22,13 @@ export default function Footers() {
                 </div>
               </div>
               
-              <div className="grid grid-cols-3 gap-0 sm:mt-4 sm:grid-cols-3 sm:gap-6 ">
-                <div className='hidden lg:inline'>
-                  <Footer.Title title="about" />
-                  <Footer.LinkGroup col>
-                    <Footer.Link href="#">xxxxxxxxxxx</Footer.Link>
-                    <Footer.Link href="#">xxxxxxxxxxx</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
+              <div className="grid grid-cols-2 gap-0 sm:mt-4 sm:grid-cols-2 sm:gap-6 ">
                 <div className='hidden lg:inline'>
                   <Footer.Title title="Contact Us" />
                   <Footer.LinkGroup col>
                     <Footer.Link href="#">Mobile - +94 76 0733 387</Footer.Link>
-                    <Footer.Link href="#">Email - </Footer.Link>
+                    <Footer.Link href="#">Email - brandsphere.contact@gmail.com</Footer.Link>
+                    <Footer.Link href="#">Address - Colombo, Sri Lanka</Footer.Link>
                   </Footer.LinkGroup>
                 </div>
                 <div className='hidden lg:inline'>
