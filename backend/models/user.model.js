@@ -3,11 +3,9 @@ import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: true,
     },
     lastName: {
         type: String,
-        required: true,
     },
     userName: {
         type: String,
@@ -21,11 +19,9 @@ const userSchema = new mongoose.Schema({
     },
     address:{
         type: String,
-        required: true,
     },
     mobile:{
         type: String,
-        required: true,
         unique: true,
     },
     isAdmin: {
@@ -35,6 +31,11 @@ const userSchema = new mongoose.Schema({
     password:{
         type: String,
         required:true,
+    },
+    profilePicture: {
+        type: String,
+        default:
+          'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
     },
     }, {timestamps: true}
 );

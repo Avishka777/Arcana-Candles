@@ -3,6 +3,7 @@ import cover from '../assets/cover.png';
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import OAuth from '../components/OAuth';
 
 export default function SignUp() {
 
@@ -109,6 +110,7 @@ export default function SignUp() {
                 'Create Account'
               )}
             </Button>
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5 font-serif'>
             <span>Have An Account?</span>
