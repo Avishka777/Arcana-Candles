@@ -11,6 +11,7 @@ import { app } from '../firebase';
 import { useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function CreateProduct() {
 
@@ -18,10 +19,12 @@ export default function CreateProduct() {
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
   const [imageUploadError, setImageUploadError] = useState(null);
   const [formData, setFormData] = useState({});
+  const [publishError, setPublishError] = useState(null);
+  const navigate = useNavigate();
   const handleUpdloadImage = async () => {
     try {
       if (!file) {
-        setImageUploadError('Please select an image');
+        setImageUploadError('Please Select An Image');
         return;
       }
       setImageUploadError(null);
@@ -55,17 +58,45 @@ export default function CreateProduct() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch('/api/product/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setPublishError(data.message);
+        return;
+      }
+
+      if (res.ok) {
+        setPublishError(null);
+        navigate(`/product/${data.slug}`);
+      }
+    } catch (error) {
+      setPublishError('Something went wrong');
+    }
+  };
+
   return (
 
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
       <h1 className='text-center text-3xl my-7 font-semibold'>Add Product</h1>
-      <form className='flex flex-col gap-4'>
+      <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
         <TextInput
             type='text'
             placeholder='Product Name'
             required
             id='title'
             className='flex-1'
+            onChange={(e) =>
+              setFormData({ ...formData, title: e.target.value })
+            }
         />
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
@@ -74,8 +105,15 @@ export default function CreateProduct() {
             required
             id='price'
             className='flex-1'
+            onChange={(e) =>
+              setFormData({ ...formData, price: e.target.value })
+            }
           />
-          <Select>
+          <Select
+            onChange={(e) =>
+              setFormData({ ...formData, category: e.target.value })
+            }
+          >
             <option value='uncategorized'>Select a category</option>
             <option value='Relaxation & Tranquillity'>Relaxation & Tranquillity</option>
             <option value='Love & Passion'>Love & Passion</option>
@@ -126,10 +164,18 @@ export default function CreateProduct() {
           placeholder='Write Something...'
           className='h-72 mb-12'
           required
+          onChange={(value) => {
+            setFormData({ ...formData, content: value });
+          }}
         />
         <Button type='submit' gradientDuoTone='purpleToPink'>
           Add Product
         </Button>
+        {publishError && (
+          <Alert className='mt-5' color='failure'>
+            {publishError}
+          </Alert>
+        )}
       </form>
     </div>
   );
