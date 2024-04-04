@@ -26,6 +26,7 @@ export const updateUser = async (req, res, next) => {
         errorHandler(400, 'User Name Can Only Contain Letters And Numbers')
       );
     }
+  }
     try {
       const updatedUser = await User.findByIdAndUpdate(
         req.params.userId,
@@ -48,5 +49,4 @@ export const updateUser = async (req, res, next) => {
     } catch (error) {
       next(error);
     }
-  }
 };
