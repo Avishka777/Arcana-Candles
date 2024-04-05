@@ -78,12 +78,38 @@ export const getproducts = async (req, res, next) => {
 
 //Delete Product
 export const deleteproduct = async (req, res, next) => {
-  if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+  if (!req.user.isAdmin) {
     return next(errorHandler(403, 'You Are Not Allowed To Delete This Product'));
   }
   try {
     await Product.findByIdAndDelete(req.params.productId);
     res.status(200).json('The Product Has Been Deleted');
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+//Update Product
+export const updateproduct = async (req, res, next) => {
+  if (!req.user.isAdmin) {
+    return next(errorHandler(403, 'You Are Not Allowed To Update This Product'));
+  }
+  try {
+    const updatedProduct = await Product.findByIdAndUpdate(
+      req.params.productId,
+      {
+        $set: {
+          title: req.body.title,
+          price: req.body.price,
+          content: req.body.content,
+          category: req.body.category,
+          image: req.body.image,
+        },
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedProduct);
   } catch (error) {
     next(error);
   }
