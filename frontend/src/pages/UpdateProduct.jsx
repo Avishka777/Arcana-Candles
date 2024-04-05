@@ -33,7 +33,7 @@ export default function UpdateProduct() {
         const data = await res.json();
         if (!res.ok) {
           console.log(data.message);
-          setPublishError(data.message);
+          setPublishError(data.message || 'Failed to fetch product data');
           return;
         }
         if (res.ok) {
@@ -146,13 +146,13 @@ export default function UpdateProduct() {
             value={formData.category}
           >
             <option value='uncategorized'>Select a category</option>
-            <option value='Relaxation & Tranquillity'>Relaxation & Tranquillity</option>
-            <option value='Love & Passion'>Love & Passion</option>
-            <option value='Clam & Clarity'>Clam & Clarity</option>
-            <option value='Balance & Inner Peace'>Balance & Inner Peace</option>
-            <option value='Positivity & Joy'>Positivity & Joy</option>
-            <option value='Connection to Nature'>Connection to Nature</option>
-            <option value='Ignite Imagination'>Ignite Imagination</option>
+            <option value='Relaxation-&-Tranquillity'>Relaxation & Tranquillity</option>
+            <option value='Love-&-Passion'>Love & Passion</option>
+            <option value='Clam-&-Clarity'>Clam & Clarity</option>
+            <option value='Balance-&-InnerPeace'>Balance & Inner Peace</option>
+            <option value='Positivity-&-Joy'>Positivity & Joy</option>
+            <option value='Connection-to-Nature'>Connection to Nature</option>
+            <option value='Ignite-Imagination'>Ignite Imagination</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>

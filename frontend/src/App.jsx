@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute';
 import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
 import CreateProduct from './pages/CreateProduct'
 import UpdateProduct from './pages/UpdateProduct'
+import ProductPage from './pages/ProductPage'
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/about" element={ <About/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
         <Route path="/sign-in" element={ <Signin/> }/>
+        <Route path='/product/:productSlug' element={<ProductPage />} />
         
         <Route element={<PrivateRoute />}>
           <Route path='/dashboard' element={<Dashboard />} />
