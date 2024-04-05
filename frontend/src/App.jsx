@@ -12,6 +12,7 @@ import Footers from './components/Footer'
 import PrivateRoute from './components/PrivateRoute';
 import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
 import CreateProduct from './pages/CreateProduct'
+import UpdateProduct from './pages/UpdateProduct'
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
         </Route>
         <Route element={<OnlyAdminPrivateRoute />}>
           <Route path='/create-product' element={<CreateProduct />} />
+          <Route path='/update-product/:productId' element={<UpdateProduct />} />
         </Route>
 
       </Routes>
