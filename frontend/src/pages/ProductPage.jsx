@@ -2,6 +2,7 @@ import { Button, Spinner } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CommentSection from '../components/CommentSection';
+import ProductCard from '../components/ProductCard';
 
 export default function ProductPage() {
   
@@ -9,6 +10,7 @@ export default function ProductPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [product, setProduct] = useState(null);
+  const [recentProducts, setRecentProducts] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -33,6 +35,21 @@ export default function ProductPage() {
     };
     fetchProduct();
   }, [productSlug]);
+
+  useEffect(() => {
+    try {
+      const fetchRecentProducts = async () => {
+        const res = await fetch(`/api/product/getproducts?limit=3`);
+        const data = await res.json();
+        if (res.ok) {
+          setRecentProducts(data.products);
+        }
+      };
+      fetchRecentProducts();
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
 
   if (loading)
     return (
@@ -71,6 +88,15 @@ export default function ProductPage() {
         ></div>
 
         <CommentSection productId={product._id} />
+
+        <div className='flex flex-col justify-center items-center mb-5'>
+        <h1 className='text-xl mt-5'>New Products</h1>
+        <div className='flex flex-wrap gap-5 mt-5 justify-center'>
+          {recentProducts &&
+            recentProducts.map((product) => <ProductCard key={product._id} product={product} />)}
+        </div>
+      </div>
+
       </main>
     );
   }
