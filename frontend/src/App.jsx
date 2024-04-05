@@ -10,6 +10,8 @@ import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Footers from './components/Footer'
 import PrivateRoute from './components/PrivateRoute';
+import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
+import CreateProduct from './pages/CreateProduct'
 
 
 export default function App() {
@@ -28,6 +30,9 @@ export default function App() {
         
         <Route element={<PrivateRoute />}>
           <Route path='/dashboard' element={<Dashboard />} />
+        </Route>
+        <Route element={<OnlyAdminPrivateRoute />}>
+          <Route path='/create-product' element={<CreateProduct />} />
         </Route>
 
       </Routes>
