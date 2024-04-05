@@ -7,6 +7,7 @@ export default function DashProducts() {
 
   const { currentUser } = useSelector((state) => state.user);
   const [userProducts, setUserProducts] = useState([]);
+  const [showMore, setShowMore] = useState(true);
   console.log(userProducts);
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,6 +16,9 @@ export default function DashProducts() {
         const data = await res.json();
         if (res.ok) {
           setUserProducts(data.products);
+          if (data.products.length < 9) {
+            setShowMore(false);
+          }
         }
       } catch (error) {
         console.log(error.message);
@@ -24,6 +28,24 @@ export default function DashProducts() {
       fetchProducts();
     }
   }, [currentUser._id]);
+
+  const handleShowMore = async () => {
+    const startIndex = userProducts.length;
+    try {
+      const res = await fetch(
+        `/api/product/getproducts?userId=${currentUser._id}&startIndex=${startIndex}`
+      );
+      const data = await res.json();
+      if (res.ok) {
+        setUserProducts((prev) => [...prev, ...data.products]);
+        if (data.products.length < 9) {
+          setShowMore(false);
+        }
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     
@@ -81,6 +103,14 @@ export default function DashProducts() {
               </Table.Body>
             ))}
           </Table>
+          {showMore && (
+            <button
+              onClick={handleShowMore}
+              className='w-full text-teal-500 self-center text-sm py-7'
+            >
+              Show More...
+            </button>
+          )}
         </>
       ) : (
         <p>You Have No Products Yet.</p>
