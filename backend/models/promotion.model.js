@@ -2,12 +2,9 @@ import mongoose from 'mongoose';
 
 const promotionSchema = new mongoose.Schema(
   {
-    promoimage1: {
+    image: {
       type: String,
     },
-    promoimage2: {
-        type: String,
-      },
   },
   { timestamps: true }
 );

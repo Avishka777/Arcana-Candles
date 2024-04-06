@@ -16,6 +16,7 @@ import UpdateProduct from './pages/UpdateProduct'
 import ProductPage from './pages/ProductPage'
 import Contact from './pages/Contact'
 import Rituals from './pages/Rituals'
+import CreatePromotion from './pages/CreatePromotion'
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         </Route>
         <Route element={<OnlyAdminPrivateRoute />}>
           <Route path='/create-product' element={<CreateProduct />} />
+          <Route path='/create-promotion' element={<CreatePromotion />} />
           <Route path='/update-product/:productId' element={<UpdateProduct />} />
         </Route>
 
