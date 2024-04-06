@@ -6,7 +6,6 @@ import SignUp from './pages/SignUp'
 import Signin from './pages/Signin'
 import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
-import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Footers from './components/Footer'
 import PrivateRoute from './components/PrivateRoute';
@@ -29,7 +28,6 @@ export default function App() {
         <Route path="/" element={ <Home/> }/>
         <Route path="/products" element={ <Products/> }/>
         <Route path="/rituals" element={ <Rituals/> }/>
-        <Route path="/gallery" element={ <Gallery/> }/>
         <Route path="/about" element={ <About/> }/>
         <Route path="/contact" element={ <Contact/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
