@@ -20,3 +20,15 @@ export const create = async (req, res, next) => {
 };
 
 
+// Get all promotions
+export const getAllPromotions = async (req, res, next) => {
+  try {
+    const promotions = await Promotion.find();
+    res.status(200).json(promotions);
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+
