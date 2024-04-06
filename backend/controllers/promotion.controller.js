@@ -31,4 +31,15 @@ export const getAllPromotions = async (req, res, next) => {
 };
 
 
-
+//Delete Promotion
+export const deletepromotion = async (req, res, next) => {
+  if (!req.user.isAdmin) {
+    return next(errorHandler(403, 'You Are Not Allowed To Delete This Promotion'));
+  }
+  try {
+    await Promotion.findByIdAndDelete(req.params.promotionId);
+    res.status(200).json('The Promotion Has Been Deleted');
+  } catch (error) {
+    next(error);
+  }
+};
