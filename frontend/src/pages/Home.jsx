@@ -58,17 +58,17 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Find Your Vibe...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={test} className="px-1 sm:px-1 h-36 w-72 sm:h-auto rounded-lg" />
-          <div>
-            <img src={test} className="px-1 sm:px-1 h-16 w-72 sm:h-56 rounded-lg" />
-            <img src={test} className="px-1 sm:px-1 mt-4 h-16 w-72 sm:h-56 rounded-lg" />
-          </div>
-          <img src={test} className="px-1 sm:px-1 h-36 w-72 sm:h-auto rounded-lg" />
-          <div>
-            <img src={test} className="px-1 sm:px-1 h-16 w-72 sm:h-56 rounded-lg" />
-            <img src={test} className="px-1 sm:px-1 mt-4 h-16 w-72 sm:h-56 rounded-lg" />
-          </div>
-          <img src={test} className="px-1 sm:px-1 h-36 w-72 sm:h-auto rounded-lg" />
+          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
+        </div>
+        <div className='flex sm:mx-20 mx-10'>
+          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
+        </div>
+        <div className='flex sm:mx-20 mx-10'>
+          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
         </div>
       </div>
 
@@ -76,9 +76,9 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Customer Feedbacks...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={i} className="mr-3 h-20 w-1/3 sm:h-auto rounded-lg p-1" />
-          <img src={i} className="mr-3 h-20 w-1/3 sm:h-auto rounded-lg p-1" />
-          <img src={i} className="mr-3 h-20 w-1/3 sm:h-auto rounded-lg p-1" />
+          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
         </div>
       </div>
     </div>

@@ -14,7 +14,6 @@ import CreateProduct from './pages/CreateProduct'
 import UpdateProduct from './pages/UpdateProduct'
 import ProductPage from './pages/ProductPage'
 import Contact from './pages/Contact'
-import Rituals from './pages/Rituals'
 import CreatePromotion from './pages/CreatePromotion'
 
 
@@ -27,7 +26,6 @@ export default function App() {
 
         <Route path="/" element={ <Home/> }/>
         <Route path="/products" element={ <Products/> }/>
-        <Route path="/rituals" element={ <Rituals/> }/>
         <Route path="/about" element={ <About/> }/>
         <Route path="/contact" element={ <Contact/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
