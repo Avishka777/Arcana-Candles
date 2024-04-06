@@ -86,11 +86,17 @@ export default function Header() {
         <Navbar.Link active={path === '/products'} as={'div'} style={{ color: path === "/products" ? "#E27D1D" : "#128AAE" }} >
           <Link to='/products'>Products</Link>
         </Navbar.Link>
+        <Navbar.Link active={path === '/rituals'} as={'div'} style={{ color: path === "/rituals" ? "#E27D1D" : "#128AAE" }} >
+          <Link to='/rituals'>Rituals</Link>
+        </Navbar.Link>
         <Navbar.Link active={path === '/gallery'} as={'div'} style={{ color: path === "/gallery" ? "#E27D1D" : "#128AAE" }}>
           <Link to='/gallery'>Gallery</Link>
         </Navbar.Link>
         <Navbar.Link active={path === '/about'} as={'div'} style={{ color: path === "/about" ? "#E27D1D" : "#128AAE" }}>
           <Link to='/about'>About Us</Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === '/contact'} as={'div'} style={{ color: path === "/contact" ? "#E27D1D" : "#128AAE" }}>
+          <Link to='/contact'>Contact Us</Link>
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

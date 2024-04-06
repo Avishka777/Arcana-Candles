@@ -14,6 +14,8 @@ import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
 import CreateProduct from './pages/CreateProduct'
 import UpdateProduct from './pages/UpdateProduct'
 import ProductPage from './pages/ProductPage'
+import Contact from './pages/Contact'
+import Rituals from './pages/Rituals'
 
 
 export default function App() {
@@ -25,8 +27,10 @@ export default function App() {
 
         <Route path="/" element={ <Home/> }/>
         <Route path="/products" element={ <Products/> }/>
+        <Route path="/rituals" element={ <Rituals/> }/>
         <Route path="/gallery" element={ <Gallery/> }/>
         <Route path="/about" element={ <About/> }/>
+        <Route path="/contact" element={ <Contact/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
         <Route path="/sign-in" element={ <Signin/> }/>
         <Route path='/product/:productSlug' element={<ProductPage />} />
