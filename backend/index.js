@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import productRoutes from './routes/product.route.js';
 import commentRoutes from './routes/comment.route.js';
 import promotionRoutes from './routes/promotion.route.js';
+import path from 'path';
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+const __dirname = path.resolve();
 
 const app = express();
 
@@ -33,6 +36,12 @@ app.use('/api/auth', authRoutes);
 app.use('/api/product', productRoutes);
 app.use('/api/comment', commentRoutes);
 app.use('/api/promotion', promotionRoutes);
+
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+});
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
