@@ -1,12 +1,21 @@
 import React from 'react'
+import cover from '../assets/cover.png';
 
 export default function About() {
   return (
     <div className='flex flex-col gap-6 pt-20 px-50 max-w mx-auto'>
-      <h2 className='text-3xl font-semibold sm:ml-20 mx-10'>Read Singular of Arcana...</h2>
-      <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
+      
+      <h1 className='sm:text-5xl text-2xl font-semibold sm:ml-20 mx-10 text-center'>“WELCOME TO ARCANA CANDLES”</h1>
+      <h1 className='sm:text-5xl text-2xl font-semibold sm:ml-20 mx-10 text-center text-gray-500'>“WHERE INSPIRATION MEETS ILLUMINATION”</h1>
+      
+      <div className='sm:mx-auto mx-10'>
+        <img src={cover} className="sm:h-96 sm:w-auto rounded-lg shadow-2xl p-2 mt-5 " alt="Cover Picture" />
+      </div>
+      <div className='sm:mx-10'>
+        <h2 className='text-3xl font-semibold sm:mx-20 mx-10 '>Read Singular of Arcana...</h2>
+      </div>
 
-      <div  className='flex flex-col gap-6 pt-10 px-20 max-w'>
+      <div  className='flex flex-col gap-6 pt-10 px-10 max-w'>
         <h2 className='text-3xl font-semibold sm:ml-20'>Our Story</h2>
         <hr className="border-b-1 border-gray-500 sm:mx-20"/>
         <p className="sm:mx-20">Welcome to Arcana Candles, where we believe in the transformative power of candlelight to elevate your everyday experiences.</p>
@@ -17,7 +26,7 @@ export default function About() {
         <p className="sm:mx-20">Welcome to Arcana Candles – where inspiration meets illumination.</p>
       </div>
 
-      <div  className='flex flex-col gap-6 pt-10 px-20 max-w mb-20'>
+      <div  className='flex flex-col gap-6 pt-10 px-10 max-w mb-20'>
         <h2 className='text-3xl font-semibold sm:ml-20'>Why Us?</h2>
         <hr className="border-b-1 border-gray-500 sm:mx-20"/>
         <p className="sm:mx-20">

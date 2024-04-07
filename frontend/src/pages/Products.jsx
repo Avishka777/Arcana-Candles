@@ -17,7 +17,7 @@ export default function Products() {
 
   return (
     
-    <div className='flex flex-col gap-6 my-10 px-20 max-w mx-auto'>
+    <div className='flex flex-col gap-6 my-10 sm:px-20 max-w mx-auto'>
               
       <div className='sm:mx-20 mx-10 p-3 gap-8 py-7'>
         {products && products.length > 0 && (

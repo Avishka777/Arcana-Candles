@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import test from '../assets/test.jpg';
-import i from '../assets/3.jpg';
+import feedback1 from '../assets/feedback1.jpg';
 import promo1 from '../assets/promo1.jpg';
 import promo2 from '../assets/promo2.jpg';
+import balenceinnerpeace from '../assets/balence-inner-peace.jpg';
+import clamclarity from '../assets/clam-clarity.jpg';
+import connectiontonature from '../assets/connection-to-nature.jpg';
+import igniteimagination from '../assets/ignite-imagination.jpg';
+import relaxationtraniquility from '../assets/relaxation-traniquility.jpg';
+import lovepassion from '../assets/love-passion.jpg';
+import positivityjoy from '../assets/positivity-joy.jpg';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -57,18 +63,18 @@ export default function Home() {
       <div className='sm:mx-20 p-3 flex flex-col gap-8 py-7'>
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Find Your Vibe...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
-        <div className='flex sm:mx-20 mx-10'>
-          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
+        <div className='flex sm:mx-20 mx-10 '>
+          <img src={clamclarity} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={relaxationtraniquility} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
         </div>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/3 sm:h-60 rounded-lg p-2" />
+          <img src={balenceinnerpeace} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
+          <img src={connectiontonature} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
+          <img src={igniteimagination} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
         </div>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/2 sm:h-60 rounded-lg p-2" />
+          <img src={positivityjoy} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={lovepassion} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
         </div>
       </div>
 
@@ -76,9 +82,9 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Customer Feedbacks...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
-          <img src={i} className="h-20 w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
         </div>
       </div>
     </div>
