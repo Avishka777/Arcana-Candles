@@ -114,7 +114,8 @@ export default function CommentSection({ productId }) {
   };
 
   return (
-    <div className='max-w-2xl mx-auto w-full p-3'>
+    
+    <div className='sm:px-24 mx-auto px-10 w-full'>
       {currentUser ? (
         <div className='flex items-center gap-1 my-5 text-gray-500 text-sm'>
           <p>Signed in as:</p>

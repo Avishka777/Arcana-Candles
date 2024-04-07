@@ -59,39 +59,38 @@ export default function ProductPage() {
     );
     
     return (
-      <main className='p-3 flex flex-col max-w-6xl mx-auto min-h-screen'>
+      
+      <main className='flex flex-col mx-auto sm:mx-auto sm:px-20 min-h-screen'>
         <h1 className='text-3xl mt-10 p-3 text-center font-serif max-w-2xl mx-auto lg:text-4xl'>
           {product && product.title}
         </h1>
-        <Link
-          to={`/search?category=${product && product.category}`}
-          className='self-center mt-5'
-        >
-          <Button color='gray' pill size='xs'>
-            {product && product.category}
-          </Button>
-        </Link>
-        <img
-          src={product && product.image}
-          alt={product && product.title}
-          className='mt-10 p-3 max-h-[600px] w-full object-cover'
-        />
-        <div className='flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-2xl text-xs'>
+        <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
+
+        <div className='flex justify-between p-3 border-slate-500 sm:mx-20 mx-10 text-xs'>
           <span>{product && new Date(product.createdAt).toLocaleDateString()}</span>
+            <h2 className='text-xl mt-2 text-center font-serif max-w-xl mx-auto lg:text-xl text-gray-500'>
+              {product && product.category}
+            </h2>
           <span className='italic'>
             {product && (product.content.length / 1000).toFixed(0)} mins read
           </span>
         </div>
-        <div
-          className='p-3 max-w-2xl mx-auto w-full product-content'
-          dangerouslySetInnerHTML={{ __html: product && product.content }}
-        ></div>
+
+        <div className='mx-auto '>
+          <img
+            src={product && product.image}
+            alt={product && product.title}
+            className='p-1 max-h-[250px] w-auto object-cover'
+          />
+        </div>
+        
+        <div className='mx-auto p-10 sm:px-20 product-content' dangerouslySetInnerHTML={{ __html: product && product.content }}></div>
 
         <CommentSection productId={product._id} />
 
         <div className='flex flex-col justify-center items-center mb-5'>
-        <h1 className='text-xl mt-5'>New Products</h1>
-        <div className='flex flex-wrap gap-5 mt-5 justify-center'>
+        <h1 className='text-xl mt-5'>New Products...</h1>
+        <div className='flex flex-wrap gap-5 mt-5 justify-center mx-10'>
           {recentProducts &&
             recentProducts.map((product) => <ProductCard key={product._id} product={product} />)}
         </div>
