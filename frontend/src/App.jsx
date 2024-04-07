@@ -15,6 +15,7 @@ import UpdateProduct from './pages/UpdateProduct'
 import ProductPage from './pages/ProductPage'
 import Contact from './pages/Contact'
 import CreatePromotion from './pages/CreatePromotion'
+import Search from './pages/Search'
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/contact" element={ <Contact/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
         <Route path="/sign-in" element={ <Signin/> }/>
+        <Route path='/search' element={<Search />} />
         <Route path='/product/:productSlug' element={<ProductPage />} />
         
         <Route element={<PrivateRoute />}>
