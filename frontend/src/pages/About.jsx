@@ -1,5 +1,4 @@
 import React from 'react'
-import cover from '../assets/cover.png';
 
 export default function About() {
   return (
@@ -8,11 +7,8 @@ export default function About() {
       <h1 className='sm:text-5xl text-2xl font-semibold sm:ml-20 mx-10 text-center'>“WELCOME TO ARCANA CANDLES”</h1>
       <h1 className='sm:text-5xl text-2xl font-semibold sm:ml-20 mx-10 text-center text-gray-500'>“WHERE INSPIRATION MEETS ILLUMINATION”</h1>
       
-      <div className='sm:mx-auto mx-10'>
-        <img src={cover} className="sm:h-96 sm:w-auto rounded-lg shadow-2xl p-2 mt-5 " alt="Cover Picture" />
-      </div>
       <div className='sm:mx-10'>
-        <h2 className='text-3xl font-semibold sm:mx-20 mx-10 '>Read Singular of Arcana...</h2>
+        <h2 className='text-3xl font-semibold sm:mx-20 mx-10 sm:mt-10'>Read Singular of Arcana...</h2>
       </div>
 
       <div  className='flex flex-col gap-6 pt-10 px-10 max-w'>
