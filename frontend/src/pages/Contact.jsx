@@ -1,8 +1,4 @@
 import React from 'react'
-import facebook from '../assets/facebook.png';
-import tiktok from '../assets/tiktok.png';
-import whatsapp from '../assets/whatsapp.png';
-import instagram from '../assets/instagram.png';
 
 export default function Contact() {
 
@@ -22,16 +18,16 @@ export default function Contact() {
     <div className='flex mx-auto px-10'>
       
       <a onClick={() => openWhatsApp('+94760733387', 'Hello, I am interested in your products.')}   target="_blank" >
-        <img src={whatsapp} className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2  " alt="Whatsapp Icon" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-whatsapp.png?alt=media&token=1411bd85-c589-47e5-acb7-4995942db8bd" className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2  " alt="Whatsapp Icon" />
       </a>
       <a href='https://web.facebook.com/profile.php?id=61556755573437&mibextid=ZbWKwL&_rdc=1&_rdr'  target="_blank" >
-        <img src={facebook} className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Facebook Icon" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-facebook.png?alt=media&token=15165aa2-db82-444c-8afe-299f2f0e8fd4" className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Facebook Icon" />
       </a>
       <a href='https://www.instagram.com/arcana.candles.lk?igsh=N3UxbWFrcDRscHl6'  target="_blank" >
-        <img src={instagram} className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Instagram Icon" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-instagram.png?alt=media&token=77874823-29e4-4822-8f1c-ce5e2b750bb6" className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Instagram Icon" />
       </a>
       <a href='https://www.tiktok.com/@arcana.candles.lk?_t=8kr9uO37df6&_r=1'  target="_blank" >
-        <img src={tiktok} className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Tiktok Icon" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-tiktok.png?alt=media&token=794ac175-9e82-4830-be15-b5b26ae5d91f" className="sm:h-40 sm:w-auto rounded-lg shadow-2xl p-2 " alt="Tiktok Icon" />
       </a>
     </div>
 

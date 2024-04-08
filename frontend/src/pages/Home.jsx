@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch('/api/product/getproducts?limit=5');
+      const res = await fetch('/api/product/getproducts?limit=4');
       const data = await res.json();
       setProducts(data.products);
     };

@@ -54,7 +54,7 @@ export default function Header() {
       
       <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white flex'>
         <img src={logo} className="mr-3 h-9 sm:h-9" alt="Company Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white font-serif">ARCANA CANDLES</span>
+        <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white font-serif">ARCANA CANDLES</span>
       </Link>
       
       <form onSubmit={handleSubmit}>
@@ -66,13 +66,13 @@ export default function Header() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}/>
       </form>
-      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
+      <Button className='w-12 h-10 hidden' color='gray' pill>
         <AiOutlineSearch />
       </Button>
 
       <div className='flex gap-2 md:order-2'>
         <Button
-          className='w-12 h-10 sm:inline rounded-lg'
+          className='sm:inline rounded-lg'
           color='gray'
           pill
           onClick={() => dispatch(toggleTheme())}
@@ -99,8 +99,12 @@ export default function Header() {
           </Dropdown>
         ) : (
           <Link to='/sign-in'>
-            <Button gradientDuoTone='pinkToOrange' outline>
-              Sign In
+            <Button 
+              gradientDuoTone='purpleToBlue' 
+              outline
+              className='w-20 h-10 sm:inline rounded-lg'
+            >
+              <p className='text-xs'>Sign In</p>
             </Button>
           </Link>
         )}

@@ -9,16 +9,23 @@ export default function Footers() {
         <Footer container className="h-50 sm:h-50">
           <div className="w-full">
             <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-              <div className="ml-10">
-                <img src={logo} className="mr-3 h-20 sm:h-20 ml-14 mb-2" alt="Company Logo" />
-                <span className="whitespace-nowrap text-lg font-semibold dark:text-white font-serif">ARCANA CANDLES</span>
+              <div className="">
+                <img src={logo} className="mr-3 h-20 sm:h-20 ml-20 mb-2" alt="Company Logo" />
+                <span className="whitespace-nowrap text-lg font-semibold dark:text-white font-serif ml-6">ARCANA CANDLES</span>
                 
-                <div className="flex gap-5 mt-4">
-                  <Footer.Icon href="https://www.facebook.com/profile.php?id=61556755573437" icon={BsFacebook} target="_blank" />
-                  <Footer.Icon href="https://www.instagram.com/arcana.candles.lk/" icon={BsInstagram} target="_blank" />
-                  <Footer.Icon href="#" icon={BsTwitter} target="_blank"  />
-                  <Footer.Icon href="https://github.com/Avishka777" icon={BsGithub} target="_blank"  />
-                  <Footer.Icon href="#" icon={BsDribbble} target="_blank" />
+                <div className="flex gap-1 mt-2">
+                  <a onClick={() => openWhatsApp('+94760733387', 'Hello, I am interested in your products.')}   target="_blank" >
+                    <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-whatsapp.png?alt=media&token=1411bd85-c589-47e5-acb7-4995942db8bd" className="sm:h-14 h-14 sm:w-auto rounded-lg p-1  " alt="Whatsapp Icon" />
+                  </a>
+                  <a href='https://web.facebook.com/profile.php?id=61556755573437&mibextid=ZbWKwL&_rdc=1&_rdr'  target="_blank" >
+                    <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-facebook.png?alt=media&token=15165aa2-db82-444c-8afe-299f2f0e8fd4" className="sm:h-14 h-14 sm:w-auto rounded-lg p-1 " alt="Facebook Icon" />
+                  </a>
+                  <a href='https://www.instagram.com/arcana.candles.lk?igsh=N3UxbWFrcDRscHl6'  target="_blank" >
+                    <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-instagram.png?alt=media&token=77874823-29e4-4822-8f1c-ce5e2b750bb6" className="sm:h-14 h-14 sm:w-auto rounded-lg p-1 " alt="Instagram Icon" />
+                  </a>
+                  <a href='https://www.tiktok.com/@arcana.candles.lk?_t=8kr9uO37df6&_r=1'  target="_blank" >
+                    <img src="https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/icon-tiktok.png?alt=media&token=794ac175-9e82-4830-be15-b5b26ae5d91f" className="sm:h-14 h-14 sm:w-auto rounded-lg p-1 " alt="Tiktok Icon" />
+                  </a>
                 </div>
               </div>
               
