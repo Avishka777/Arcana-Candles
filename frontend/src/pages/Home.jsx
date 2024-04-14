@@ -4,13 +4,6 @@ import ProductCard from '../components/ProductCard';
 import feedback1 from '../assets/feedback1.jpg';
 import promo1 from '../assets/promo1.jpg';
 import promo2 from '../assets/promo2.jpg';
-import balenceinnerpeace from '../assets/balence-inner-peace.jpg';
-import clamclarity from '../assets/clam-clarity.jpg';
-import connectiontonature from '../assets/connection-to-nature.jpg';
-import igniteimagination from '../assets/ignite-imagination.jpg';
-import relaxationtraniquility from '../assets/relaxation-traniquility.jpg';
-import lovepassion from '../assets/love-passion.jpg';
-import positivityjoy from '../assets/positivity-joy.jpg';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -51,7 +44,7 @@ export default function Home() {
               ))}
             </div>
             <Link
-              to={'/search'}
+              to={'/products'}
               className='text-lg text-teal-500 hover:underline text-center'
             >
               View More...
@@ -64,17 +57,17 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Find Your Vibe...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10 '>
-          <img src={clamclarity} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
-          <img src={relaxationtraniquility} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2FBalance-and%20%20Inner-peace.png?alt=media&token=b8186b2b-1aa0-4089-93f9-87107e6f6e41"} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2FCalm-and-Clarity.png?alt=media&token=1750e461-a640-4ce7-b0f8-83ae1818d758"} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
         </div>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={balenceinnerpeace} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
-          <img src={connectiontonature} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
-          <img src={igniteimagination} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2FIgnite-Imagination.png?alt=media&token=a172983c-89da-4649-885f-c970350b5d70"} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2FPositivity-and-Joy.png?alt=media&token=ff4151e9-1b14-4006-b0f1-451ff27081a7"} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2FRelaxation-and-Tranquility.png?alt=media&token=b3de069d-c4ab-4d6a-9485-64ebd12914bb"} className="h-auto sm:h-auto w-1/3 rounded-lg px-2 mx-auto" />
         </div>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={positivityjoy} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
-          <img src={lovepassion} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2Fconnection-to-Nature.png?alt=media&token=c516737c-94d4-4f1a-9ff2-f18f831f49ed"} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
+          <img src={"https://firebasestorage.googleapis.com/v0/b/arcana-candles.appspot.com/o/Moods%2Flove-and-Passion.png?alt=media&token=a9ffa02c-3685-4d58-b0ed-a50a5ab2f0ca"} className="h-auto sm:h-auto w-1/2 rounded-lg px-2 mx-auto" />
         </div>
       </div>
 
@@ -82,9 +75,8 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Customer Feedbacks...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
-          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
-          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/2 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/2 sm:h-auto rounded-lg p-2" />
         </div>
       </div>
     </div>

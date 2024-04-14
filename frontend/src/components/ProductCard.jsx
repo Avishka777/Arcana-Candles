@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
   
   return (
 
-    <div className='group relative mx-auto border border-teal-500 hover:border-2 h-[480px] overflow-hidden rounded-lg sm:w-[280px] w-[280px] transition-all'>
+    <div className='group relative mx-auto border border-teal-500 hover:border-2 h-[480px] overflow-hidden rounded-lg sm:w-[230px] w-[230px] transition-all'>
       
       <Link to={`/product/${product.slug}`}>
         <img
