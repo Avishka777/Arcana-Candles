@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import feedback1 from '../assets/feedback1.jpg';
+import feedback1 from '../assets/feedback1.png';
+import feedback2 from '../assets/feedback2.png';
+import feedback3 from '../assets/feedback3.png';
 import promo1 from '../assets/promo1.jpg';
 import promo2 from '../assets/promo2.jpg';
 
@@ -75,8 +77,9 @@ export default function Home() {
         <h2 className='text-3xl font-semibold sm:mx-20 mx-10'>Customer Feedbacks...</h2>
         <hr class="border-b-1 border-gray-500 sm:mx-20 mx-10"/>
         <div className='flex sm:mx-20 mx-10'>
-          <img src={feedback1} className="h-auto w-1/2 sm:h-auto rounded-lg p-2" />
-          <img src={feedback1} className="h-auto w-1/2 sm:h-auto rounded-lg p-2" />
+          <img src={feedback1} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback2} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
+          <img src={feedback3} className="h-auto w-1/3 sm:h-auto rounded-lg p-2" />
         </div>
       </div>
     </div>
