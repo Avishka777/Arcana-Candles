@@ -1,5 +1,4 @@
 # Project Description
-# Note - This project is still ongoing...
 
 Welcome to the Arcana Candles E-Commerce Platform! Our system is crafted to effortlessly manage product sales, prioritizing security, data integrity, and user-friendly interfaces. Whether you're a customer or part of our administrative team, expect a seamless experience tailored to your needs.
 # Functional Requirements:  
